@@ -39,13 +39,11 @@ label{
     border: 1px solid white;
     border-radius: 7px;
 }
-
 .interactive{
     display: flex;
     align-items: center;
     text-align: center;
     width: 120px;
-    background-color: palegreen;
 }
 
 input{
@@ -53,20 +51,15 @@ input{
     width: 70px;
     height: 50px;
     margin:5px auto;
-    box-sizing: border-box;
     border:0;
 
     /*Text*/
     color: white;
     font-family:'Poppin', sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     text-align: center;
-    font-size: 45px;
-    align-content: center;
-
+    font-size: 35px;
     transition: all .15s ease;
-
-    background-color: rgb(255, 0, 212);
     
 }::-webkit-outer-spin-button,
  ::-webkit-inner-spin-button{
@@ -74,38 +67,31 @@ input{
     margin: 0;
 }input:focus{
     outline: none;
-    font-size: 50px;
+    font-size: 40px;
     height: 50px;
     width: 80px;
 }
 #opButton{
-    background: transparent; 
     color: white;
     width: 30px;
     height: 30px;
     border: 0;
     font-weight: 700;
     font-size: 20px;
-    justify-content:center;
-    align-items: center;
     transition: all .3s;
 }
 #opButton:hover{
     transform: scale(1.5,1.5);
 }
 button{
-    margin: 25px auto 25px auto;
-
     text-transform: uppercase;
     font-family: 'Noka', sans-serif;
     font-weight: 900;
     font-size: 20px;
     width: 200px;
     height: 50px;
-  
     border: 0;
     border-radius: 7px;
-
     background-color: white;
 }
 
