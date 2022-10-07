@@ -6,19 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="icon" type="image" href="img/favicon.svg"/>
-
     <!-- Link AdobeFont Noka-->
     <link rel="stylesheet" href="https://use.typekit.net/ecg6aww.css">
 
     <title>Churrascômetro</title>
 </head>
 <body>
-    
     <div class="container">
-        <h1>Churras<br>cômetro</h1>
+        <div id="title">Churrasquinho <br> da Brahma</div>
         <div id="form">
             <div id="adult" class=" formItem">
-
                 <label for="adult"> Quantidade de Adultos </label>
                     <div class="interactive">
                     <div class="dec button" id="opButton"> - </div>
@@ -26,7 +23,6 @@
                     <div class="inc button" id="opButton"> + </div>
                     </div>
             </div>
-
             <div id="child" class=" formItem">
                 <label for="children"> Quantidade de Crianças </label>
                 <div class="interactive">
@@ -35,23 +31,24 @@
                     <div class="inc button" id="opButton"> + </div>
                 </div>  
             </div>
-
-        <div id="time" class=" formItem">
-            <label for="time"> Duração<br>em Horas</label>
+            <div id="time" class=" formItem">
+            <label for="time"> Duração <br> em Horas</label>
             <div class="interactive">
                 <div class="dec button" id="opButton"> - </div>
                 <input type="number" id="duration" value="0" />
                 <div class="inc button" id="opButton"> + </div>
             </div>
+            </div>
+            <button onclick="calculate()">Calcular</button>
         </div>
 
-        <button onclick="calculate()">Calcular</button>
-        </div>
         <div id="result" style="display:none">
+            <div id="carne">
+                <>
+            </div>
+            <div id="cerveja"></div>
             <button onclick="recalc()">Recalcular</button>
         </div>
-        
-
     </div>
 
     <script src="script/script.js"></script>

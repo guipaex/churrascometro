@@ -1,91 +1,81 @@
 /*importing Google Font*/
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-body{
-    font-family:'Noka', sans-serif;
-    background-image: url("../img/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-
-    margin: 0;
-    padding: 0;
-}
-h1{
-    text-transform: uppercase;
-    font-weight: 900;
-    text-align: center;
-    color:White;
-    font-size: 5rem;
-    line-height:1;
-    filter: drop-shadow(3px 5px 5px black);
-
-    padding-top: 100px;
+*{font-family:'Noka', sans-serif;   margin: 0;    padding: 0;
+    --gold: #DAA520;
+    --red: #b60000;
+    --darkRed: #5d0c19;
+    --duploMalte: #3d060e;
 }
 
 .container{
     margin: auto;
-    background-image: url("../img/cuttingboard.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: contain;
-    background-attachment:scroll;
-    filter: drop-shadow(5px 10px 5px black);
-
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
     /*text*/
-    font-family: 'Noka', sans-serif;
     font-size: 20px;
     color: white;
+    min-width: 360px;
+    max-width: 60vw;
+    height: 95vh;
 
-    width: 600px;
-    height: 100vh;
-    text-align:center;
+    border-radius: 10px;
+    border: 1px solid var(--gold);
+    /*background: linear-gradient(0deg, #ec514c 0%, #fd731d 50%,#ff9500 100%);    */
+    background-color: var(--darkRed);
+    filter: drop-shadow(5px 5px 7px #00000050);
 }
-
+#title{
+    font-family: 'Anton';
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1.1;
+    width: 80%;
+    margin-top: -50px;
+}
 label{
     margin: auto;
-    width: 35%;
-    font-weight: 700;
-    font-size: 25px;
+    width: 50%;
+    font-weight: 600;
+    font-size: 20px;
     line-height: 1.15;
 }
-
 .formItem{ 
-    margin: auto;
-    padding: 30px 0;
-    align-items: center;
+   text-align: left;
+    margin: 20px auto;
+    padding: 10px;
     width: 75%;
     display: flex;
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+    background-color: var(--darkRed);
+    filter: drop-shadow(5px 5px 7px #00000050);
 }
-
 .interactive{
     display: flex;
     align-items: center;
     text-align: center;
-    width: 100px;
-    margin: auto;
-    justify-content: center;
+    width: 120px;
 }
-
 input{
     background: transparent;
     width: 70px;
     height: 50px;
     margin:5px auto;
-    box-sizing: border-box;
     border:0;
 
     /*Text*/
     color: white;
     font-family:'Poppin', sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     text-align: center;
-    font-size: 45px;
-    align-content: center;
-
-    transition: all .15s ease
+    font-size: 35px;
+    transition: all .15s ease;
     
 }::-webkit-outer-spin-button,
  ::-webkit-inner-spin-button{
@@ -93,48 +83,61 @@ input{
     margin: 0;
 }input:focus{
     outline: none;
-    font-size: 50px;
+    font-size: 40px;
     height: 50px;
     width: 80px;
 }
 #opButton{
-    background: transparent; 
-    color: white;
+    color: var(--gold);
     width: 30px;
     height: 30px;
     border: 0;
     font-weight: 700;
     font-size: 20px;
-    justify-content:center;
-    align-items: center;
     transition: all .3s;
-
 }
 #opButton:hover{
     transform: scale(1.5,1.5);
 }
-
 button{
-    margin: auto;
+    color: white;
     text-transform: uppercase;
-    font-family: 'Noka', sans-serif;
-    font-weight: 900;
-    font-size: 20px;
-
-    width: 50%;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+  
+    width: 200px;
     height: 50px;
-    background-color: white;
+    margin: 20px;
     border: 0;
-    border-radius: 15px;
-
-    margin: 25px;
+    border-radius: 7px;
+    border: 1px solid var(--gold);
+    background-color: var(--duploMalte);
+    transition: all 300ms;
 }
-
+button:hover{
+    transform: scale(1.05);
+    color: var(--darkRed);
+    background-color: var(--gold);
+    filter: drop-shadow(5px 5px 7px #00000050);
+}
 #result{
     margin-top: 100px;
-    text-align:center;
+    text-align: center;
     font-family: 'Noka', sans-serif;
     font-size: 25px;
     font-weight: 600;
     color: white;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--duploMalte);
+    background-size: 10px 10px;
+    background-image: radial-gradient(
+        transparent 5px,
+        var(--darkRed) 5px,
+        var(--darkRed) 10px,
+        transparent 10px
+    );
+    background-position: 0 0 , 24px 24px;
 }

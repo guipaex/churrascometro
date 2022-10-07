@@ -61,7 +61,6 @@ let inputTime = document.getElementById("duration");
 let result = document.getElementById("result");
 let form = document.getElementById("form").style;
 
-
 function calculate(){
     let adults = inputAdults.value;
     let children = inputChildren.value;
@@ -77,14 +76,24 @@ function calculate(){
 
     result.style.display ="block";
 
-    result.innerHTML = `<p>${qdtTotalCarne}g de Carne</p>`
-    result.innerHTML += `<p>${totalBeer}ml de Cerveja</p>`
+    if(qdtTotalCarne >= 1000){
+      qdtTotalCarne = qdtTotalCarne/1000;
+      result.innerHTML = `<p>${qdtTotalCarne}Kg de Carne</p>`;
+      } else{
+      result.innerHTML = `<p>${qdtTotalCarne}g de Carne</p>`;
+    }
+    if(totalBeer >= 1000){
+      totalBeer = totalBeer/1000;
+      result.innerHTML += `<p>${totalBeer}L de Cerveja</p>`
+    } else {
+      result.innerHTML += `<p>${totalBeer}ml de Cerveja</p>`
+    }
+      
     result.innerHTML += `<p>${qdtTotalBebidas}ml de Bebidas</p>`
     result.innerHTML += `<button onclick="recalc()">Recalcular</button>`
 }
 
 function carnePP(duracao){
-  let carne = 400;
   if (duracao >= 6){
     return 650;
   } else {
@@ -93,7 +102,6 @@ function carnePP(duracao){
 }
 
 function cervaPP(duracao){
-  let carne = 400;
   if (duracao >= 6){
     return 2000;
   } else {
@@ -102,7 +110,6 @@ function cervaPP(duracao){
 }
 
 function bebidaPP(duracao){
-  let carne = 400;
   if (duracao >= 6){
     return 1500;
   } else {
@@ -111,6 +118,17 @@ function bebidaPP(duracao){
 }
 
 
+function recalc(){
+  inputAdults.value = 0;
+  inputChildren.value = 0;
+  inputTime.value = 0;
+
+  form.display = 'block';
+
+
+  result.style.display = "none";
+}
+
 //Increase & Decrease Buttons
 
 /*Criar ainda:
@@ -118,5 +136,4 @@ function bebidaPP(duracao){
   -> Quem bebe cerveja ou não;
   -> Divisão de dinheiro pra cada pessoa;
   -> Acompanhamentos;
-  -> Variavel por hora;
-  -> Tipos de Carne*/
+  -> Variavel por hora;*/
