@@ -118,6 +118,17 @@ function bebidaPP(duracao){
 }
 
 
+function recalc(){
+  inputAdults.value = 0;
+  inputChildren.value = 0;
+  inputTime.value = 0;
+
+  form.display = 'block';
+
+
+  result.style.display = "none";
+}
+
 //Increase & Decrease Buttons
 
 /*Criar ainda:

@@ -1,17 +1,22 @@
 /*importing Google Font*/
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-*{font-family:'Noka', sans-serif;   margin: 0;    padding: 0;}
+*{font-family:'Noka', sans-serif;   margin: 0;    padding: 0;
+    --gold: #DAA520;
+    --red: #b60000;
+    --darkRed: #5d0c19;
+    --duploMalte: #3d060e;
+}
 
 .container{
     margin: auto;
     margin-top: 20px;
-    padding: auto;
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-
+    text-align: center;
+    
     /*text*/
     font-size: 20px;
     color: white;
@@ -20,9 +25,18 @@
     height: 95vh;
 
     border-radius: 10px;
-    border: 1px solid white;
-    background: linear-gradient(0deg, #ec514c 0%, #fd731d 50%,#ff9500 100%);
+    border: 1px solid var(--gold);
+    /*background: linear-gradient(0deg, #ec514c 0%, #fd731d 50%,#ff9500 100%);    */
+    background-color: var(--darkRed);
     filter: drop-shadow(5px 5px 7px #00000050);
+}
+#title{
+    font-family: 'Anton';
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1.1;
+    width: 80%;
+    margin-top: -50px;
 }
 label{
     margin: auto;
@@ -32,12 +46,15 @@ label{
     line-height: 1.15;
 }
 .formItem{ 
+   text-align: left;
     margin: 20px auto;
     padding: 10px;
     width: 75%;
     display: flex;
-    border: 1px solid white;
+    border: 1px solid var(--gold);
     border-radius: 7px;
+    background-color: var(--darkRed);
+    filter: drop-shadow(5px 5px 7px #00000050);
 }
 .interactive{
     display: flex;
@@ -45,7 +62,6 @@ label{
     text-align: center;
     width: 120px;
 }
-
 input{
     background: transparent;
     width: 70px;
@@ -72,7 +88,7 @@ input{
     width: 80px;
 }
 #opButton{
-    color: white;
+    color: var(--gold);
     width: 30px;
     height: 30px;
     border: 0;
@@ -84,17 +100,26 @@ input{
     transform: scale(1.5,1.5);
 }
 button{
+    color: white;
     text-transform: uppercase;
-    font-family: 'Noka', sans-serif;
-    font-weight: 900;
-    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+  
     width: 200px;
     height: 50px;
+    margin: 20px;
     border: 0;
     border-radius: 7px;
-    background-color: white;
+    border: 1px solid var(--gold);
+    background-color: var(--duploMalte);
+    transition: all 300ms;
 }
-
+button:hover{
+    transform: scale(1.05);
+    color: var(--darkRed);
+    background-color: var(--gold);
+    filter: drop-shadow(5px 5px 7px #00000050);
+}
 #result{
     margin-top: 100px;
     text-align: center;
@@ -102,4 +127,17 @@ button{
     font-size: 25px;
     font-weight: 600;
     color: white;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--duploMalte);
+    background-size: 10px 10px;
+    background-image: radial-gradient(
+        transparent 5px,
+        var(--darkRed) 5px,
+        var(--darkRed) 10px,
+        transparent 10px
+    );
+    background-position: 0 0 , 24px 24px;
 }
